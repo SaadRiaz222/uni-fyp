@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <script src="https://kit.fontawesome.com/94636fca99.js" crossorigin="anonymous"></script>
+    <script src="java.js"></script>
+    <title>E-commerce Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <div class="logo">
+                <img src="logo.png.jpeg" alt="Shop Online">
+
+            </div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Cart</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <div id="google_translate_element">
+                        <script type="text/javascript">
+                            function googleTranslateElementInit() {
+                                new google.translate.TranslateElement({
+                                    pageLanguage: 'en',
+                                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                                }, 'google_translate_element');
+                            }
+                        </script>
+                        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                    </div>
+                    <div class="box">
+                        <input type="text" placeholder="Search..">
+                        <a href="#">
+                            <i class="fas fa-search">
+                            </i>
+                        </a>
+                    </div>
+                </ul>
+        </div>
+    </header>
+    <main>
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <img src="Slide1.jpeg" alt="Slide 1">
+                </div>
+                <div class="slide">
+                    <img src="Slide2.jpeg" alt="Slide 2">
+                </div>
+                <div class="slide">
+                    <img src="Slide3.jpeg" alt="Slide 3">
+                </div>
+            </div>
+            <button class="prev" id="prev">&#10094;</button>
+            <button class="next" id="next">&#10095;</button>
+        </div>
+        <div class="container">
+            <section id="products">
+            
+            </section>
+        </div>
+        
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 E-commerce Site</p>
+        </div>
+    </footer>
+</body>
+</html>
+<css>
+    body {
+        font-family: Arial, sans-serif;
+        background-size: contain;
+        padding: 0;
+        margin: 0;
+    }
+    header{
+        height: 50vh;
+        background-size: cover;
+        background-position: center;
+    }
+    .nav{
+        max-width: 1000px;
+        height: auto;
+    }
+    .logo{
+        float: left;
+        width: 15px;
+        height: auto;
+        
+    }
+    .logo img{
+        float: left;
+        width: 150px;
+        height: auto;
+        padding: 10px;
+    }
+    .nav ul {
+        float: right;
+        list-style-type: none;
+        margin-top: 25px;
+    }
+    
+    .nav ul li {
+        margin-left: 1em;
+        display: inline-block;
+        padding: 10px;
+    }
+    
+    .nav ul li a {
+        color: #000;
+        text-decoration: none;
+        display: inline-block;
+        flex-wrap: wrap;
+        margin: auto;
+        text-align: center;
+    }
+    #google_translate_element {
+        margin-top: 5px;
+        float: right;
+        margin-left: 1em;
+        padding: 10px;
+    }
+    .selectLanguage{
+        color: #000;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+    }
+    .goog-te-combo {
+        font-family: sans-serif;
+        text-transform: uppercase;
+    }
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+    #products {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 1em;
+    
+    }
+    
+    .product {
+        
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin: 2%;
+        padding: 2px;
+        text-align: center;
+    }
+    
+    .product img {
+        max-width: 100%;
+        height: 100px;
+        width: 200px;
+    }
+    .box{
+        height: 30px;
+        display: flex;
+        cursor: pointer;
+        padding: 10px 20px;
+        background: pink;
+        border-radius: 30px;
+        align-items: center;
+        box-shadow: 0 10px 25px rgb(0, 0, 0. 0.3);
+    }
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+    }
+    .slider {
+        position: relative;
+        width: 80%;
+        max-width: 800px;
+    }
+    
+    .slides {
+        display: flex;
+        overflow: hidden;
+    }
+    
+    .slide {
+        min-width: 100%;
+        transition: transform 0.5s ease-in-out;
+    }
+    
+    img {
+        width: 100%;
+        display: block;
+    }
+    
+    .prev, .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+    
+    .prev {
+        left: 10px;
+    }
+    
+    .next {
+        right: 10px;
+    }
+    .box:hover input{
+        width: 400px;
+    }
+    .box.active{
+        width: 400px;
+    }
+    .box input{
+        width: 0;
+        outline: none;
+        border: none;
+        font-weight: 500;
+        transition: 0.8s;
+        background: transparent;
+    }
+    .box a .fas{
+        color: rgb(15, 194, 149);
+        font-size: 18px;
+    }
+    
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1em 0;
+        position: bottom;
+        bottom: 0;
+        width: 100%;
+    }
+</css>
+<js>
+    document.addEventListener('DOMContentLoaded', function() {
+        const products = [
+            {
+                id: 1,
+                name: 'Earbuds',
+                price: 29.99,
+                image: 'earbuds.jpeg'
+            },
+            {
+                id: 2,
+                name: 'Mobile',
+                price: 49.99,
+                image: 'mobile.jpeg'
+            },
+            {
+                id: 3,
+                name: 'Power bank',
+                price: 19.99,
+                image: 'power bank.jpeg'
+            },
+            {
+                id: 4,
+                name: 'Watches',
+                price: 19.99,
+                image: 'watch.jpeg'
+            }
+        ];
+    
+        const productsContainer = document.getElementById('products');
+    
+        products.forEach(product => {
+            const productElement = document.createElement('div');
+            productElement.classList.add('product');
+    
+            productElement.innerHTML = `
+                <img src="${product.image}" alt="${product.name}">
+                <h3>${product.name}</h3>
+                <p>$${product.price.toFixed(2)}</p>
+                <button>Add to Cart</button>
+            `;
+    
+            productsContainer.appendChild(productElement);
+        });
+    });
+    let cart = [];
+    
+    function addToCart(product) {
+        cart.push(product);
+        console.log(cart);
+    }
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        const products = [
+            // Product data as before
+        ];
+    
+        const productsContainer = document.getElementById('products');
+    
+        products.forEach(product => {
+            const productElement = document.createElement('div');
+            productElement.classList.add('product');
+    
+            productElement.innerHTML = `
+                <img src="${product.image}" alt="${product.name}">
+                <h3>${product.name}</h3>
+                <p>$${product.price.toFixed(2)}</p>
+                <button data-id="${product.id}">Add to Cart</button>
+            `;
+    
+            productsContainer.appendChild(productElement);
+    
+            productElement.querySelector('button').addEventListener('click', () => {
+                addToCart(product);
+            });
+        });
+    });
+    document.addEventListener('DOMContentLoaded', () => {
+        const slides = document.querySelectorAll('.slide');
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+        let currentSlide = 0;
+    
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+                slide.style.transform = `translateX(${(i - index) * 100}%)`;
+            });
+        }
+    
+        function prevSlide() {
+            currentSlide = (currentSlide === 0) ? slides.length - 1 : currentSlide - 1;
+            showSlide(currentSlide);
+        }
+    
+        function nextSlide() {
+            currentSlide = (currentSlide === slides.length + 1) ? 0 : currentSlide + 1;
+            showSlide(currentSlide);
+        }
+    
+        prevButton.addEventListener('click', prevSlide);
+        nextButton.addEventListener('click', nextSlide);
+    
+        // Optional: Auto slide every 5 seconds
+        setInterval(nextSlide, 5000);
+    
+        // Initialize the first slide
+        showSlide(currentSlide);
+    });
+    
+</js>
+<section class="main">
+    <div class="slider">
+        <div class="slides">
+            <div class="slide">
+                <img src="Mobile.jpg" alt="Slide 1">
+            </div>
+            <div class="slide">
+                <img src="Laptop.jpg" alt="Slide 2">
+            </div>
+            <div class="slide">
+                <img src="Earpods.jpg" alt="Slide 3">
+            </div>
+        </div>
+        <button class="prev" id="prev">&#10094;</button>
+        <button class="next" id="next">&#10095;</button>
+    </div>
+</section>
+<section class="section section-lg pb-0 pt-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="title">
+                    <h1 class="display-3 text notranslate">Nest Mart &amp; Grocery</h1>
+                    <p class="display-4 text-muted">Everyday Fresh &amp; Clean with Our Products</p>
+                    <p class="title">
+  <i class="fa fa-clock-o" aria-hidden="true"></i><span class="opened_time cursor-pointer" data-toggle="modal" data-target="#modal-restaurant-hours">Opened until Thu 05:00</span><span class="divider"></span>
+ <i class="fa fa-map-marker" aria-hidden="true"></i><a href="https://www.google.com/maps/search/?api=1&amp;query=1.2910592,110.4347136" target="_blank" rel="noreferrer" title="View on Google Maps">NY</a><span class="divider"></span>
+  <i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+60168529337">+60168529337</a>
+                                            </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
